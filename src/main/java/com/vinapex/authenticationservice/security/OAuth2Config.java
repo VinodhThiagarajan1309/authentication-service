@@ -8,6 +8,7 @@ import org.springframework.security.oauth2.config.annotation.configurers.ClientD
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 
+
 @Configuration
 public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 
@@ -21,12 +22,12 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
                 .withClient("eagleeye")
-                .secret("thisissecret")
+                .secret("{noop}thisissecret")
                 .authorizedGrantTypes(
                         "refresh_token",
                         "password",
                         "client_credentials"
-                ).scopes("webClient","mobileClient");
+                ).scopes("webclient","mobileclient");
     }
 
     @Override
