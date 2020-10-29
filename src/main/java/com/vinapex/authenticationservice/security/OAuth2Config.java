@@ -11,7 +11,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 
 @Configuration
 public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
-
+/*
     @Autowired
     private AuthenticationManager authenticationManager;
 
@@ -35,5 +35,5 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
         endpoints
                 .authenticationManager(authenticationManager)
                 .userDetailsService(userDetailsService);
-    }
+    }*/
 }
